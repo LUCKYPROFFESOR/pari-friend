@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Virtual Gift for Pari</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom right, black, purple);
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .scene {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+
+    .animated-img {
+      max-width: 60%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .dog {
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .sushi {
+      animation: rotateSushi 6s linear infinite;
+    }
+
+    .music {
+      animation: pulse 2s infinite;
+    }
+
+    .caption {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes rotateSushi {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.8; }
+    }
+  </style>
+</head>
+<body>
+  <div class="scene">
+    <img src="https://media.giphy.com/media/3o7TKy6nqU9M9h3UeY/giphy.gif" alt="Dog" class="animated-img dog">
+    <div class="caption">Puppy love 🐶</div>
+  </div>
+
+  <div class="scene">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjhjNzdkYzFjNGRjMmQwMzA2MmQ3MDlkZmNkZDE1MTI0MzA5ZjBkNCZlcD12MV8z/g0dUAYY3xFzNpsuUan/giphy.gif" alt="Sushi" class="animated-img sushi">
+    <div class="caption">Sushi dreams 🍣</div>
+  </div>
+
+  <div class="scene">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTJkZmFlYzFiMTgxYjM2ZjMxZDU2YmExODdkMzZhNjUyNjk3YmZjNyZlcD12MV8z/3ohs4BSacFKI7A717y/giphy.gif" alt="Olivia Rodrigo" class="animated-img music">
+    <div class="caption">Olivia Rodrigo vibes 🎶</div>
+  </div>
+</body>
+</html>
